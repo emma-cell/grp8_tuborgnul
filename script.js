@@ -86,7 +86,6 @@ let text2 = document.querySelector("#nultextmobile");
 setTimeout(text2Skift1, 2000);
 
 function text2Skift1() {
-    console.log("textskift1")
     text2.textContent = "Konsekvenser";
     setTimeout(text2Skift2, 2000);
 }
@@ -109,4 +108,64 @@ function text2Skift4() {
 function text2Skift5() {
     text2.textContent = "Tømmermænd";
     setTimeout(text2Skift1, 2000);
+}
+
+let circle1 = document.querySelector("#circle1");
+let circle2 = document.querySelector("#circle2");
+
+circle1.addEventListener("click", changeImg1);
+circle2.addEventListener("click", changeImg2);
+
+function changeImg1() {
+    circle1.classList.remove("circleempty");
+    circle1.classList.add("circlefull");
+    circle2.classList.remove("circlefull");
+    circle2.classList.add("circleempty");
+    document.querySelector(".beerimg").classList.add("hide");
+    document.querySelector(".beerimg2").classList.remove("hide");
+}
+
+function changeImg2() {
+    circle2.classList.remove("circleempty");
+    circle2.classList.add("circlefull");
+    circle1.classList.remove("circlefull");
+    circle1.classList.add("circleempty");
+    document.querySelector(".beerimg2").classList.add("hide");
+    document.querySelector(".beerimg").classList.remove("hide");
+}
+
+let daaseWord = document.querySelector(".daaseword");
+let flaskeWord = document.querySelector(".flaskeword");
+
+
+circle2.addEventListener("mouseover", daaseWordAppear)
+circle1.addEventListener("mouseover", flaskeWordAppear)
+
+circle2.addEventListener("mouseout", daaseWordDisappear)
+circle1.addEventListener("mouseout", flaskeWordDisappear)
+
+function daaseWordAppear() {
+    console.log("daasewordappear")
+    daaseWord.classList.add("fadein");
+    daaseWord.classList.remove("fadeout");
+}
+
+function flaskeWordAppear() {
+    console.log("flaskewordappear")
+    flaskeWord.classList.add("fadein");
+    flaskeWord.classList.remove("fadeout");
+}
+
+
+function daaseWordDisappear() {
+    console.log("daaseworddisappear")
+    daaseWord.classList.remove("fadein");
+    daaseWord.classList.add("fadeout");
+}
+
+function flaskeWordDisappear() {
+    console.log("flaskeworddisappear")
+
+    flaskeWord.classList.remove("fadein");
+    flaskeWord.classList.add("fadeout");
 }
