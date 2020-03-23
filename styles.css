@@ -1,11 +1,13 @@
+/* -------------- GENERELLE INDSTILLINGER OG BASICS -------------------*/
+
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     margin: 0;
 }
-
 
 
 ::-webkit-scrollbar {
@@ -14,15 +16,51 @@ body {
 
 img {
     width: 100%;
-    height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.hide {
+    display: none;
+}
+
+/*----------------- FARVER-------------*/
+
+.lightblue {
+    background-color: #bee0d9;
+}
+
+.darkblue {
+    background-color: #093a82;
+}
+
+.yellow {
+    background-color: #fac177;
+}
+
+.lightbluefont {
+    color: #bee0d9;
+}
+
+.darkbluefont {
+    color: #093a82;
+}
+
+.yellowfont {
+    color: #fac177;
+}
+
+.spacer {
+    height: 60px;
+}
 
 /* -------------- CSS TIL SPLITSCREEN --------------*/
 
 section {
     scroll-snap-align: start;
-    border: solid 1px white;
+
 }
 
 .container {
@@ -52,15 +90,249 @@ section {
 .section_left {
     width: 100%;
     height: 100vh;
-    background-color: red;
 }
 
 .section_right {
     width: 100%;
     height: 100vh;
-    background-color: rebeccapurple;
+}
+
+/*------------------- MOBILE --------------------------------------*/
+
+.mobilesection {
+
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow-y: scroll;
+}
+
+#mobile {
+    scroll-snap-type: y mandatory;
 
 }
+
+.beergallerymobile {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 30px;
+    grid-column-gap: 50px;
+    margin: 30px 30px 100px 30px;
+    overflow: hidden;
+    height: 80vh;
+    max-width: 800px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.beergallerymobile img {
+    transform: rotate(40deg);
+    width: 100%;
+}
+
+#mobile button {
+    margin-left: 10vw;
+
+}
+
+/*----------- TEKST-----------*/
+
+#mobile h2 {
+    margin: 10vw 10vw 1vw 10vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+#mobile h1 {
+    margin: 55vh 10vw 0vw 8vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: left;
+}
+
+#mobile #nultextmobile {
+    font-size: 3.5rem;
+    margin-top: 0vw;
+
+}
+
+
+#mobile p {
+    margin: 10vw 10vw 10vw 10vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+/*------------------- MOBILE SLUT --------------------------------------*/
+
+
+
+/*-------------------- DESKTOP --------------------------------------*/
+
+.menuheader {
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    width: 100vw;
+    height: 60px;
+}
+
+.backgroundphoto {
+    background-image: url(imgs/corona_beer.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.beergallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 30px;
+    grid-column-gap: 50px;
+    margin: 30px 30px 100px 30px;
+    overflow: hidden;
+    height: 84vh;
+    max-width: 800px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.beergallery img {
+    transform: rotate(40deg);
+    width: 100%;
+}
+
+.tuborgbutton {
+    margin-left: 4vw;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: #093a82;
+    height: 50px;
+    border: 0;
+    transition: 0.5s;
+
+}
+
+.tuborgbutton a {
+    color: #fac177;
+    text-decoration: none;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.tuborgbutton a:hover {
+    color: #093a82;
+    transition: 0.5s;
+
+}
+
+.tuborgbutton:hover {
+    background-color: #fac177;
+    transition: 0.5s;
+}
+
+
+
+#desktop .beerimg {
+    height: 500px;
+    width: 280px;
+    background-image: url(imgs/tuborgdaase.png);
+    background-size: 100%;
+    max-height: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#desktop .beerimg2 {
+    height: 500px;
+    width: 132px;
+    background-image: url(imgs/tuborgflaske.png);
+    background-size: 100%;
+    max-height: 100%;
+
+    margin: auto;
+    margin-top: 100px;
+}
+
+.inputkode {
+    margin-left: 4vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+
+}
+
+.kodebutton {
+    background-color: #bee0d9;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    margin-left: 10px;
+
+}
+
+
+/*------------ TEKST ---------*/
+
+
+#desktop h2 {
+    margin: 4vw 4vw 1vw 4vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+#desktop h1 {
+    margin: 4vw 4vw 1vw 4vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 10rem;
+    text-align: center;
+    margin-top: 31vh;
+    transition: 1s;
+}
+
+#desktop p {
+    margin: 2vw 4vw 4vw 4vw;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+
+#desktop #nultext {
+
+    font-size: 5rem;
+    margin-top: 37vh;
+
+}
+
+/*-------------------- DESKTOP SLUT --------------------------------------*/
+
+
 
 /*---------- MEDIA QUIERIES ----------------------- */
 
