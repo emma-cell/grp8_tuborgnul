@@ -169,3 +169,112 @@ function flaskeWordDisappear() {
     flaskeWord.classList.remove("fadein");
     flaskeWord.classList.add("fadeout");
 }
+
+
+//------------------ QUIZ ----------------
+
+
+let sporgsmal = document.querySelector("#sporgsmal");
+let knap = document.querySelector("#knap");
+let point = 0;
+let svar = document.querySelector(".quizsvar");
+
+knap.addEventListener("click", knapKlik);
+
+
+function knapKlik() {
+    sporgsmal.textContent = "2. Hvad hedder Obama til fornavn?";
+    knap.removeEventListener("click", knapKlik);
+    let svar = document.querySelector("#inputfelt").value;
+
+
+    if (svar == "0" || svar == "0,0" || svar == "0%" || svar == "0.0") {
+        console.log("Du gættede rigtigt!");
+        svar.textContent = "Rigtigt!";
+        point++;
+    } else {
+        console.log("Du gættede forkert!")
+        svar.textContent = "Forkert!";
+    }
+
+    knap.addEventListener("click", knapKlik2);
+
+}
+
+function knapKlik2() {
+    sporgsmal.textContent = "3. Er det okay at drikke en alkoholfri øl?";
+    knap.removeEventListener("click", knapKlik2);
+    let svar = document.querySelector("#inputfelt").value;
+
+
+    if (svar == "Barack" || svar == "barack") {
+        console.log("Du gættede rigtigt!");
+        svar.textContent = "Rigtigt!";
+        point++;
+    } else {
+        console.log("Du gættede forkert!")
+        svar.textContent = "Forkert!";
+    }
+
+    knap.addEventListener("click", knapKlik3);
+
+}
+
+function knapKlik3() {
+    sporgsmal.textContent = "4. Smager en Tuborg Nul præcis som andre øl?";
+    knap.removeEventListener("click", knapKlik3);
+    let svar = document.querySelector("#inputfelt").value;
+
+
+    if (svar == "Ja" || svar == "ja") {
+        console.log("Du gættede rigtigt!");
+        svar.textContent = "Rigtigt!";
+        point++;
+    } else {
+        console.log("Du gættede forkert!")
+        svar.textContent = "Forkert!";
+    }
+
+    knap.addEventListener("click", knapKlik4);
+
+}
+
+function knapKlik4() {
+    sporgsmal.textContent = "5. Hvad hedder Hitler til fornavn?";
+    knap.removeEventListener("click", knapKlik4);
+    let svar = document.querySelector("#inputfelt").value;
+
+
+    if (svar == "Ja" || svar == "ja") {
+        console.log("Du gættede rigtigt!");
+        svar.textContent = "Rigtigt!";
+        point++;
+    } else {
+        console.log("Du gættede forkert!")
+        svar.textContent = "Forkert!";
+    }
+
+    knap.addEventListener("click", knapKlik5);
+
+}
+
+function knapKlik5() {
+    knap.removeEventListener("click", knapKlik5);
+    let svar = document.querySelector("#inputfelt").value;
+
+    if (svar == "Adolf" || svar == "adolf") {
+        console.log("Du gættede rigtigt!");
+        point++;
+        svar.textContent = "Rigtigt!";
+    } else {
+        console.log("Du gættede forkert!")
+        svar.textContent = "Forkert!";
+    }
+
+    spilSlut();
+}
+
+function spilSlut() {
+    console.log("Tilykke du fik", point, "point!");
+    svar.textContent = "Tilykke du fik", point, "point!";
+}

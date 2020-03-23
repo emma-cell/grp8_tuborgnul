@@ -365,6 +365,8 @@ section {
 
 }
 
+
+
 .circlefull {
     background-image: url(imgs/circlefull.svg);
     background-size: cover;
@@ -431,6 +433,77 @@ section {
 #section3 {
     overflow: hidden;
     position: relative;
+
+}
+
+/*---------- QUIZ----------------------- */
+
+#knap {
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #093a82;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 20px 40px 20px 40px;
+    border-radius: 40px;
+    color: #bee0d9;
+    transition: 0.5s;
+}
+
+#knap:hover {
+    background-color: #bee0d9;
+    color: #093a82;
+    transition: 0.5s;
+}
+
+
+
+#inputfelt {
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #bee0d9;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 20px 60px 20px 30px;
+    border-radius: 40px;
+    color: #093a82;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#quiz {
+    text-align: center;
+}
+
+#desktop #sporgsmal {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #093a82;
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#desktop .quizheader {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 60px;
+}
+
+#desktop .quizsvar {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
 
 }
 
