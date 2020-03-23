@@ -177,7 +177,7 @@ function flaskeWordDisappear() {
 let sporgsmal = document.querySelector("#sporgsmal");
 let knap = document.querySelector("#knap");
 let point = 0;
-let svar = document.querySelector(".quizsvar");
+let result = document.querySelector(".quizsvar");
 
 knap.addEventListener("click", knapKlik);
 
@@ -190,11 +190,11 @@ function knapKlik() {
 
     if (svar == "0" || svar == "0,0" || svar == "0%" || svar == "0.0") {
         console.log("Du gættede rigtigt!");
-        svar.textContent = "Rigtigt!";
+        result.textContent = "Rigtigt!";
         point++;
     } else {
         console.log("Du gættede forkert!")
-        svar.textContent = "Forkert!";
+        result.textContent = "Forkert!";
     }
 
     knap.addEventListener("click", knapKlik2);
@@ -209,11 +209,11 @@ function knapKlik2() {
 
     if (svar == "Barack" || svar == "barack") {
         console.log("Du gættede rigtigt!");
-        svar.textContent = "Rigtigt!";
+        result.textContent = "Rigtigt!";
         point++;
     } else {
         console.log("Du gættede forkert!")
-        svar.textContent = "Forkert!";
+        result.textContent = "Forkert!";
     }
 
     knap.addEventListener("click", knapKlik3);
@@ -228,11 +228,11 @@ function knapKlik3() {
 
     if (svar == "Ja" || svar == "ja") {
         console.log("Du gættede rigtigt!");
-        svar.textContent = "Rigtigt!";
+        result.textContent = "Rigtigt!";
         point++;
     } else {
         console.log("Du gættede forkert!")
-        svar.textContent = "Forkert!";
+        result.textContent = "Forkert!";
     }
 
     knap.addEventListener("click", knapKlik4);
@@ -247,11 +247,11 @@ function knapKlik4() {
 
     if (svar == "Ja" || svar == "ja") {
         console.log("Du gættede rigtigt!");
-        svar.textContent = "Rigtigt!";
+        result.textContent = "Rigtigt!";
         point++;
     } else {
         console.log("Du gættede forkert!")
-        svar.textContent = "Forkert!";
+        result.textContent = "Forkert!";
     }
 
     knap.addEventListener("click", knapKlik5);
@@ -265,10 +265,10 @@ function knapKlik5() {
     if (svar == "Adolf" || svar == "adolf") {
         console.log("Du gættede rigtigt!");
         point++;
-        svar.textContent = "Rigtigt!";
+        result.textContent = "Rigtigt!";
     } else {
         console.log("Du gættede forkert!")
-        svar.textContent = "Forkert!";
+        result.textContent = "Forkert!";
     }
 
     spilSlut();
@@ -276,5 +276,5 @@ function knapKlik5() {
 
 function spilSlut() {
     console.log("Tilykke du fik", point, "point!");
-    svar.textContent = "Tilykke du fik", point, "point!";
+    result.textContent = "Tilykke du fik " + point + " point!";
 }
