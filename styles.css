@@ -89,6 +89,7 @@ html {
 
 .button_container {
     position: relative;
+    top: -1vw;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -138,7 +139,7 @@ html {
 
 .overlay {
     position: fixed;
-    background: #ffffff;
+    background-color: #bee0d9;
     top: 0;
     left: 0;
     width: 100%;
@@ -158,9 +159,9 @@ html {
 }
 
 .overlay.open li {
-    /*    -webkit-animation: fadeInRight .5s ease forwards;*/
+
     animation: fadeInRight .5s ease forwards;
-    /*    -webkit-animation-delay: .35s;*/
+
     animation-delay: .35s;
 }
 
@@ -197,13 +198,13 @@ html {
     margin-bottom: 20px;
 }
 
-.overlay ul li {
+.overlay li {
     display: block;
     height: 25%;
     height: calc(100% / 4);
     min-height: 50px;
     position: relative;
-    opacity: 0;
+
     font-size: 1.2rem;
 }
 
@@ -223,14 +224,28 @@ html {
 }
 */
 .mobile_nav a {
-    color: black;
+    color: #093a82;
+    padding: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    padding-right: 20px;
+    font-weight: 500;
+    font-family: futura-pt, sans-serif;
     z-index: 10000;
 }
 
+.mobile_nav a:hover {
+    color: #fac177;
+}
 
+
+/*
 .hidden {
     display: none;
-}
+}*/
 
 
 
@@ -446,7 +461,7 @@ section {
     width: 100vw;
     height: 60px;
     background-color: #bee0d9;
-    z-index: 10000;
+    top: 0;
 
 }
 
