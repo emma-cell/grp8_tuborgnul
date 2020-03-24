@@ -15,12 +15,15 @@
 
     <div id="desktop" class="container">
         <header class="menuheader">
+            <!--            <img class="tuborglogo" src="imgs/tuborgnul_logo.png" alt="tuborgnullogo">-->
+            <h2 class="tuborgnullogo">TUBORG NUL</h2>
             <nav>
                 <ul>
-                    <a href="#section1">Section1</a>
-                    <a href="#section2">Section2</a>
-                    <a href="#section3">Section3</a>
-                    <a href="#section4">Section4</a>
+                    <a href="#om">OM TUBORG NUL</a>
+                    <a href="#smag">SMAG</a>
+                    <a href="#video">VIDEO</a>
+                    <a href="#konkurrence">KONKURRENCE</a>
+                    <a href="#quizsection">QUIZ</a>
 
                 </ul>
             </nav>
@@ -28,12 +31,15 @@
 
         <div class="container_left">
 
-            <section class="section_right darkblue">
+            <section id="section1left" class="section_right darkblue">
                 <div class="spacer"></div>
-                <h1 class="yellowfont">NUL</h1>
+                <h1 class="lightbluefont">NUL</h1>
+
+
             </section>
 
-            <section class="section_left lightblue">
+
+            <section id="om" class="section_left lightblue">
                 <div class="spacer"></div>
                 <h2 class="darkbluefont">Less is more <br>Tuborg</h2>
                 <p class="darkbluefont">
@@ -43,49 +49,68 @@
                 </p>
                 <button class="tuborgbutton"><a href="https://tuborg.dk/" target="_blank">TUBORGS HJEMMESIDE</a></button>
             </section>
-            <section id="test1" class="section_right yellow">
+
+
+            <section id="smag" class="section_left yellow">
                 <div class="spacer"></div>
-                <h2 class="darkbluefont">SENDER DU TIT <br> DRUNK TEXTS?</h2>
-                <p class="darkbluefont">
-                    Vi kender alle sammen at vågne op næste morgen, og komme i tanke om hvad man skrev aftenen før. <br><br> Ved at fx supplere med en Tuborg Nul, kan du hjælpe digselv med at undgå at texte exen, dit crush eller dem som aldrig svarede dig på Tinder.
+                <h2 class="darkbluefont">SMAGEN AF <br>TUBORG NUL</h2>
+                <p class="darkbluefont smagtekst">
+                    Forfriskende pilsnersmag, herlig frugtig aroma og en smuk gylden farve - en let drikkelig og super velsmagende pilsner, helt uden alkohol
                 </p>
+
             </section>
 
-            <section class="section_left lightblue">
+
+            <section id="video" class="section_right darkblue">
+                <div class="spacer"></div>
+                <h2 class="lightbluefont videotekst">SE VORES KAMPAGNE VIDEO </h2>
+
+            </section>
+
+
+
+
+
+            <section id="konkurrence" class="section_left lightblue">
                 <div class="spacer"></div>
                 <div class="changeimg">
                     <div id="circle1" class="circlefull"></div>
                     <div id="circle2" class="circleempty"></div>
                     <p class="daaseword fadeout">DÅSE</p>
                     <p class="flaskeword fadeout">FLASKE</p>
-
                 </div>
-
-
                 <div class="beerimg hide"></div>
                 <div class="beerimg2"></div>
             </section>
-            <section class="section_right yellow">
+
+
+            <section id="quizsection" class="section_right yellow">
                 <div class="spacer"></div>
                 <h2 class="darkbluefont quizheader">TAG VORES QUIZ</h2>
-
                 <div id="quiz">
                     <p id="sporgsmal">1. Hvor meget alkohol indeholder en Tuborg Nul?</p>
                     <input type="text" placeholder="Dit svar" id="inputfelt">
                     <button id="knap" type="button">Godkend</button>
                     <p class="quizsvar"></p>
                 </div>
-
-
             </section>
+
+
 
         </div>
 
+
         <div class="container_right">
 
-            <section id="section1right" class="section_right lightblue">
 
+
+
+            <section class="section_right lightblue">
+                <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="myvideo2">
+                    <source src="tuborg_aftereffects.mp4" type="video/mp4">
+                </video>
             </section>
+
 
             <section id="section4" class="darkblue section_left">
                 <div class="spacer"></div>
@@ -96,15 +121,29 @@
                 </p>
                 <input class="inputkode" type="text" placeholder="KODE">
                 <button class="kodebutton">SEND</button>
+                <p class="kodemessage lightbluefont"></p>
+                <input type="text" class="inputemail hide" placeholder="EMAIL">
+
             </section>
 
-            <section id="section3" class="section_right lightblue">
+
+
+
+            <section class="section_left lightblue">
+                <div class="spacer"></div>
+                <video class="placeholdervideo" controls>
+                    <source src="placeholder.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+
+            <section id="section3" class="section_right yellow">
                 <div class="spacer"></div>
 
-                <video controls preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="myvideo">
-                    <source src="Comp03.mov" type="video/mp4">
+                <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="myvideo">
+                    <source src="statistik-2.mp4" type="video/mp4">
                 </video>
-
             </section>
 
             <section id="section2" class="section_left darkblue">
@@ -168,29 +207,52 @@
                 </div>
             </section>
 
+
+
             <section id="section1right" class="section_right lightblue">
                 <div class="spacer"></div>
-                <!--                <div class="backgroundphoto"></div>-->
+
                 <h1 id="nultext" class="lightbluefont">Tømmermænd</h1>
             </section>
-
-
 
         </div>
 
     </div>
 
+
+
+
+
+
     <div id="mobile" class="container">
         <header class="menuheader">
-            <a href="#test1">Linkur</a>
+            <nav class="mobile_nav">
+                <div class="button_container" id="toggle">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+
+                <div class="overlay" id="overlay">
+                    <nav class="overlay-menu">
+                        <ul>
+                            <li><a href="#mobilesection3">OM TUBORG NUL</a></li>
+                            <li><a href="#mobilesection4">SMAG</a></li>
+                            <li><a href="#mobilesection5">VIDEO</a></li>
+                            <li><a href="#mobilesection6">KONKURRENCE</a></li>
+                            <li><a href="#mobilesection8">QUIZ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
         </header>
-        <section class="mobilesection lightblue">
+        <section id="mobilesection1" class="mobilesection lightblue">
             <div class="spacer"></div>
-            <h1 class="darkbluefont">NUL</h1>
-            <h1 id="nultextmobile" class="darkbluefont">Tømmermænd</h1>
+            <h1 class="lightbluefont">NUL</h1>
+            <h1 id="nultextmobile" class="lightbluefont">Tømmermænd</h1>
         </section>
 
-        <section class="mobilesection darkblue">
+        <section id="mobilesection2" class="mobilesection darkblue">
             <div class="beergallerymobile">
                 <div>
                     <img src="imgs/tuborgdaase.png" alt="beer">
@@ -249,7 +311,7 @@
             </div>
         </section>
 
-        <section class="mobilesection lightblue">
+        <section id="mobilesection3" class="mobilesection lightblue">
             <h2 class="darkbluefont">Less is more <br>Tuborg</h2>
             <p class="darkbluefont">
                 Tuborg Nul er en perfekt balance af smagsnuancer som du også ville forvente af en pilsner. De nye bryggemetoder og brugen af humle olier gør Tuborg Nul til en moderne, alkoholfri øl med fremragende kvalitet. <br><br>
@@ -258,18 +320,55 @@
             </p>
             <button class="tuborgbutton"><a href="https://tuborg.dk/" target="_blank">TUBORGS HJEMMESIDE</a></button>
         </section>
-        <section class="mobilesection yellow">
-            <h2 class="darkbluefont">SENDER DU TIT <br> DRUNK TEXTS?</h2>
-            <p class="darkbluefont">
-                Vi kender alle sammen at vågne op næste morgen, og komme i tanke om hvad man skrev aftenen før. <br><br> Ved at fx supplere med en Tuborg Nul, kan du hjælpe digselv med at undgå at texte exen, dit crush eller dem som aldrig svarede dig på Tinder.
+        <section id="mobilesection4" class="mobilesection yellow">
+
+            <h2 class="darkbluefont">SMAGEN AF <br>TUBORG NUL</h2>
+            <p class="darkbluefont smagtekst">
+                Forfriskende pilsnersmag, herlig frugtig aroma og en smuk gylden farve - en let drikkelig og super velsmagende pilsner, helt uden alkohol
             </p>
+
+            <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="myvideo_mobile">
+                <source src="statistik-2.mp4" type="video/mp4">
+            </video>
+
         </section>
 
-        <section class="mobilesection lightblue"></section>
+        <section id="mobilesection5" class="mobilesection darkblue">
+            <h2 class="lightbluefont videotekst_mobile">SE VORES KAMPAGNE VIDEO </h2>
+            <video class="placeholdervideo_mobile" controls>
+                <source src="placeholder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-        <section class="mobilesection darkblue"></section>
+        </section>
 
-        <section class="mobilesection lightblue"></section>
+        <section id="mobilesection6" class="mobilesection lightblue">
+            <h2 class="darkbluefont">HAR DU VUNDET?</h2>
+
+            <p class="darkbluefont">
+                Under hver eneste Tuborg Nul er der en kode, indtast den her for at finde ud om du har vundet en af vores manger præmier!
+            </p>
+            <input class="inputkodemobile" type="text" placeholder="KODE">
+            <button class="kodebuttonmobile">SEND</button>
+            <p class="kodemessagemobile darkbluefont"></p>
+            <input type="text" class="inputemailmobile hide" placeholder="EMAIL">
+        </section>
+
+        <section id="mobilesection7" class="mobilesection lightblue">
+            <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="myvideo2mobile">
+                <source src="tuborg_aftereffects.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section id="mobilesection8" class="mobilesection yellow">
+            <h2 class="darkbluefont quizheader">TAG VORES QUIZ</h2>
+            <div id="quizmobile">
+                <p id="sporgsmalmobile" class="darkbluefont">1. Hvor meget alkohol indeholder en Tuborg Nul?</p>
+                <input type="text" placeholder="Dit svar" id="inputfeltmobile">
+                <button id="knapmobile" type="button">Godkend</button>
+                <p class="quizsvarmobile darkbluefont"></p>
+            </div>
+        </section>
 
     </div>
 

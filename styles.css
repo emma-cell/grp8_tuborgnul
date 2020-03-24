@@ -20,7 +20,7 @@ img {
 
 video {
     width: 100%;
-    height: 100%;
+
 }
 
 html {
@@ -63,7 +63,7 @@ html {
 }
 
 /* -------------------- NAV---------------------*/
-nav a {
+#desktop nav a {
     font-family: futura-pt, sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -74,16 +74,165 @@ nav a {
     transition: 0.5s;
 }
 
-nav a:hover {
+#desktop nav a:hover {
     color: #fac177;
     transition: 0.5s;
 }
 
-nav {
+#desktop nav {
     margin-top: 20px;
     text-align: right;
     margin-right: 50px;
 }
+
+/* -------------------nav til burgermenu---------- */
+
+.button_container {
+    position: relative;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    /*    -webkit-transition: opacity .25s ease;*/
+    transition: opacity .25s ease;
+    z-index: 100;
+    pointer-events: auto;
+}
+
+.button_container.active .top {
+    /*    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);*/
+    transform: translateY(8px) translateX(0) rotate(45deg);
+    background: #000;
+}
+
+.button_container.active .middle {
+    opacity: 0;
+    background: #000;
+}
+
+.button_container.active .bottom {
+    /*    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);*/
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+    background: #000;
+}
+
+.button_container span {
+    background: #000000;
+    border: none;
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    /*    -webkit-transition: all .35s ease;*/
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 13px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 21px;
+}
+
+.overlay {
+    position: fixed;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    /*    -webkit-transition: opacity .35s, visibility .35s, height .35s;*/
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 90;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    /*    -webkit-animation: fadeInRight .5s ease forwards;*/
+    animation: fadeInRight .5s ease forwards;
+    /*    -webkit-animation-delay: .35s;*/
+    animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+    /*    -webkit-animation-delay: .4s;*/
+    animation-delay: .4s;
+}
+
+
+.overlay nav {
+    position: relative;
+    top: 50%;
+    /*    -webkit-transform: translateY(-50%);*/
+    transform: translateY(-50%);
+
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #093a82;
+    text-align: left;
+    left: 20px;
+    z-index: 10000;
+
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+    font-size: 1.2rem;
+}
+
+.mobile_nav {
+    padding: 20px;
+    min-height: 30px;
+}
+
+/*
+.current_page {
+    font-family: freight-neo-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(234, 104, 45);
+    color: linear-gradient(90deg, rgba(234, 104, 45, 1) 0%, rgba(202, 57, 57, 1) 50%, rgba(209, 93, 142, 1) 100%);
+}
+*/
+.mobile_nav a {
+    color: black;
+    z-index: 10000;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
 
 /* -------------- CSS TIL SPLITSCREEN --------------*/
 
@@ -151,6 +300,7 @@ section {
     max-width: 800px;
     max-height: 100%;
     max-width: 100%;
+
 }
 
 .beergallerymobile img {
@@ -190,6 +340,10 @@ section {
 
 }
 
+#mobile .videotekst_mobile {
+    font-size: 4rem;
+}
+
 
 #mobile p {
     margin: 10vw 10vw 10vw 10vw;
@@ -198,6 +352,86 @@ section {
     font-style: normal;
     font-size: 1.25rem;
 }
+
+.placeholdervideo_mobile {
+    padding: 10vw;
+}
+
+#mobilesection1 {
+    background-image: url(imgs/tuborgnulpack_blurres.png);
+    background-size: 250%;
+    background-position: center;
+
+}
+
+#mobilesection5 {
+    height: 90vh;
+}
+
+#mobilesection2 {
+    height: 89vh;
+    overflow: hidden;
+}
+
+#mobilesection4 {
+    height: 94vh;
+    overflow: hidden;
+}
+
+#mobilesection6 {
+    text-align: center;
+    height: 80vh;
+}
+
+#mobilesection7 {
+    overflow: hidden;
+    height: 50vh;
+}
+
+#mobilesection8 {
+    text-align: center;
+    height: 70vh;
+
+}
+
+#mobilesection8 button {
+    margin: 0;
+
+}
+
+
+#mobile .kodebuttonmobile {
+    margin-left: 10px;
+    background-color: #093a82;
+    color: #bee0d9;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+
+}
+
+/*
+.mobilescrollsnap {
+    scroll-snap-type: x mandatory;
+
+    overflow-x: scroll;
+    display: flex;
+}
+
+.mobilescrollsnap img {
+    scroll-snap-align: center;
+    width: auto;
+    height: 400px;
+    padding: 100px;
+
+}
+*/
+
+
 
 /*------------------- MOBILE SLUT --------------------------------------*/
 
@@ -296,7 +530,7 @@ section {
 }
 
 .inputkode {
-    margin-left: 4vw;
+
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -304,8 +538,51 @@ section {
     font-size: 1.2rem;
     border-radius: 30px;
     border: none;
+    text-transform: uppercase;
 
 }
+
+.inputkodemobile {
+
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+
+}
+
+
+
+.inputemail {
+
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.inputemailmobile {
+
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
 
 .kodebutton {
     background-color: #bee0d9;
@@ -317,12 +594,59 @@ section {
     border-radius: 30px;
     border: none;
     margin-left: 10px;
+    transition: 0.5s;
+}
+
+#desktop .kodemessage {
+    margin-bottom: 20px;
+}
+
+.kodebutton:hover {
+    background-color: #fac177;
+    transition: 0.5s;
 }
 
 #section1right {
-    background-image: url(imgs/corona_beeblurred.jpg);
-    background-size: cover;
+    background-image: url(imgs/tuborgnulpack_blurres.png);
+    background-size: 250%;
+    background-position: center;
+    border-left: 1px solid white;
+
 }
+
+#section1left {
+    background-image: url(imgs/kasser_blurred.png);
+    background-size: 240%;
+    background-position: center;
+    border-right: 1px solid white;
+
+}
+
+.placeholdervideo {
+    padding: 2vw;
+    margin-top: 15vh;
+}
+
+#desktop .videotekst {
+    font-size: 5rem;
+    margin-top: 22vh;
+
+}
+
+#desktop .smagtekst {
+    font-size: 1.7rem;
+
+    font-weight: 400;
+}
+
+#smag .spacer {
+    height: 25vh;
+}
+
+#section4 .spacer {
+    height: 15vh;
+}
+
 
 
 /*------------ TEKST ---------*/
@@ -418,22 +742,50 @@ section {
 
 #myvideo {
     position: absolute;
-    top: 0;
+    top: 15vh;
     left: 0;
-    /*
-    min-width: 100%;
-    min-height: 100%;
-*/
-    /*    height: auto;*/
-    /*    width: 120%;*/
-
     z-index: 1000;
+    width: 100%;
+    border-top: 20px solid #fac177;
+    border-bottom: 20px solid #fac177;
+    padding: 30px;
+}
+
+#myvideo2 {
+    width: 140%;
+    object-position: right;
+    position: relative;
+    left: -15vw;
+
+
 }
 
 #section3 {
     overflow: hidden;
     position: relative;
 
+}
+
+#section4 {
+    text-align: center;
+}
+
+.tuborglogo {
+    position: absolute;
+    width: 80px;
+    top: -10px;
+    left: 0px;
+    margin: 0;
+}
+
+#desktop .tuborgnullogo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    color: #093a82;
+    font-size: 2rem;
+    margin: 0;
 }
 
 /*---------- QUIZ----------------------- */
@@ -458,9 +810,40 @@ section {
     transition: 0.5s;
 }
 
+#knapmobile {
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #093a82;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 20px 40px 20px 40px;
+    border-radius: 40px;
+    color: #bee0d9;
+    transition: 0.5s;
+}
+
+
 
 
 #inputfelt {
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #bee0d9;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 20px 60px 20px 30px;
+    border-radius: 40px;
+    color: #093a82;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#inputfeltmobile {
     border: none;
     font-family: futura-pt, sans-serif;
     font-weight: 500;
@@ -488,13 +871,13 @@ section {
     color: #093a82;
     font-size: 1.4rem;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 #desktop .quizheader {
     text-align: center;
     font-size: 4rem;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 #desktop .quizsvar {
